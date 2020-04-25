@@ -10,7 +10,7 @@
 using namespace std;
 
 rosbag::Bag bag;
-bag.open("test.bag", rosbag::bagmode::Read);
+bag.open("2020-04-23-10-47-52_rear_1.bag", rosbag::bagmode::Read);
  
 std::vector<std::string> topics;
 topics.push_back(std::string("chatter"));
