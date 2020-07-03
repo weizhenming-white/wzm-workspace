@@ -1,0 +1,13 @@
+.DS_Store
+*.pyc
+.*.swp
+.idea
+models
+.tmp
+config_tmp.py
+outputs
+__pycache__
+/data
+cmake*
+export
+*.zip
