@@ -14,18 +14,15 @@ def distance(A, B):
     distan = pow(tmp, (1.0 / 2))
     return distan
 
-def length(x):
+def length(x, y):
     """
     直角三角形，知道两个直角边，求第三边
     """
-    length = pow(pow(x, 2) * 2, (1.0 / 2))
+    length = pow(pow(x, 2) + pow(y, 2), (1.0 / 2))
     return length
 
 
-
-
-
 if __name__ == "__main__":
-    # dis = distance([0, 0], [1, 1])
-    # print dis
-    print length(3)
+    dis = distance([8.2, 0.1], [0 + 3,0])
+    print(dis)
+    print(length(4, 3))
