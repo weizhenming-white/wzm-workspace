@@ -7,6 +7,7 @@ time:2020-06-29 17:39
 brief:输入三个数字，确定这三个数字能组成什么三角形
 """
 
+
 def parseTrigon(a, b, c):
     """
     -1代表输入值的类型不对
@@ -28,9 +29,9 @@ def parseTrigon(a, b, c):
             return 1                  # 普通三角形
         if a == b == c:
             return 3                    # 等边三角形
-        if (a ==b) or (a == c) or (b ==c):
+        if (a == b) or (a == c) or (b == c):
             return 2                    # 等腰三角形
 
 
 if __name__ == "__main__":
-    print parseTrigon(3, "3" , 6)
+    print(parseTrigon(3, 3, 6))
