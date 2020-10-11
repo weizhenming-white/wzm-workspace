@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d69f68d1-95f2-4035-ad5b-57c5b9842386" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="d69f68d1-95f2-4035-ad5b-57c5b9842386" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EasyWork/tools/rosbag_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_study/rosbag_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_study/test_rosbag copy.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_study/test_rosbag copy.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,10 +41,21 @@
       <find>/holo/sensors/aceinna_imu/imu</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1PckN5N2qq4iKMMLTkvLnbOqdA5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/test_study" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -46,27 +64,63 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test_study" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/EasyWork/HoloParking" />
       <recent name="$PROJECT_DIR$/easy_work/HoloParking" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python.test_rosbag">
+  <component name="RunManager" selected="Python.rosbag_test">
+    <configuration name="rosbag_test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PycharmProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_study" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_study/rosbag_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="rosbag_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PycharmProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/EasyWork/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EasyWork/tools/rosbag_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test_bag_image" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -89,7 +143,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test_bags (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test_rosbag copy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -102,51 +156,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_study/test_bag.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test_matplotlib" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PycharmProjects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_study" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_study/test_matplotlib.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test_numpy" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PycharmProjects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_data-analysis/test_third-libs" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_data-analysis/test_third-libs/test_numpy.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_study/test_rosbag copy.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -179,11 +189,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.rosbag_test" />
+        <item itemvalue="Python.rosbag_test (1)" />
+        <item itemvalue="Python.test_rosbag copy" />
         <item itemvalue="Python.test_rosbag" />
         <item itemvalue="Python.test_bag_image" />
-        <item itemvalue="Python.test_matplotlib" />
-        <item itemvalue="Python.test_numpy" />
-        <item itemvalue="Python.test_bags (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -223,11 +233,53 @@
       <workItem from="1568726218694" duration="1458000" />
       <workItem from="1568875701428" duration="212000" />
       <workItem from="1568875945112" duration="9347000" />
+      <workItem from="1599046458319" duration="164000" />
+      <workItem from="1599047286162" duration="904000" />
+      <workItem from="1599049106982" duration="1793000" />
+      <workItem from="1599050988299" duration="1246000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1988" y="232" width="732" height="640" key="#Inspections" timestamp="1599050057083">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1988" y="232" width="732" height="640" key="#Inspections/1366.0.1920.1080/0.27.1366.741@1366.0.1920.1080" timestamp="1599050057083" />
+    <state width="1799" height="293" key="GridCell.Tab.0.bottom" timestamp="1599051590652">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1799" height="293" key="GridCell.Tab.0.bottom/1366.0.1920.1080/0.27.1366.741@1366.0.1920.1080" timestamp="1599051590652" />
+    <state width="1799" height="293" key="GridCell.Tab.0.center" timestamp="1599051590652">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1799" height="293" key="GridCell.Tab.0.center/1366.0.1920.1080/0.27.1366.741@1366.0.1920.1080" timestamp="1599051590652" />
+    <state width="1799" height="293" key="GridCell.Tab.0.left" timestamp="1599051590652">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1799" height="293" key="GridCell.Tab.0.left/1366.0.1920.1080/0.27.1366.741@1366.0.1920.1080" timestamp="1599051590652" />
+    <state width="1799" height="293" key="GridCell.Tab.0.right" timestamp="1599051590652">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1799" height="293" key="GridCell.Tab.0.right/1366.0.1920.1080/0.27.1366.741@1366.0.1920.1080" timestamp="1599051590652" />
+    <state width="1799" height="337" key="GridCell.Tab.1.bottom" timestamp="1599051409440">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1799" height="337" key="GridCell.Tab.1.bottom/1366.0.1920.1080/0.27.1366.741@1366.0.1920.1080" timestamp="1599051409440" />
+    <state width="1799" height="337" key="GridCell.Tab.1.center" timestamp="1599051409440">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1799" height="337" key="GridCell.Tab.1.center/1366.0.1920.1080/0.27.1366.741@1366.0.1920.1080" timestamp="1599051409440" />
+    <state width="1799" height="337" key="GridCell.Tab.1.left" timestamp="1599051409440">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1799" height="337" key="GridCell.Tab.1.left/1366.0.1920.1080/0.27.1366.741@1366.0.1920.1080" timestamp="1599051409440" />
+    <state width="1799" height="337" key="GridCell.Tab.1.right" timestamp="1599051409440">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1799" height="337" key="GridCell.Tab.1.right/1366.0.1920.1080/0.27.1366.741@1366.0.1920.1080" timestamp="1599051409440" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -237,23 +289,31 @@
           <line>106</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_study/rosbag_test.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="    count_timer()" />
+        <watch expression="count_timer()" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PycharmProjects$test_rosbag.coverage" NAME="test_rosbag Coverage Results" MODIFIED="1568890928909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_study" />
-    <SUITE FILE_PATH="coverage/PycharmProjects$test_bag_image.coverage" NAME="test_bag_image Coverage Results" MODIFIED="1566446144409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_study" />
-    <SUITE FILE_PATH="coverage/PycharmProjects$test.coverage" NAME="test Coverage Results" MODIFIED="1559036603996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/EasyWork/HoloParking" />
+    <SUITE FILE_PATH="coverage/PycharmProjects$test_bags.coverage" NAME="test_bags Coverage Results" MODIFIED="1556008060530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PycharmProjects$test_numpy.coverage" NAME="test_numpy Coverage Results" MODIFIED="1566444519215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_data-analysis/test_third-libs" />
+    <SUITE FILE_PATH="coverage/PycharmProjects$test_rosbag_copy.coverage" NAME="test_rosbag copy Coverage Results" MODIFIED="1599051116645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_study" />
+    <SUITE FILE_PATH="coverage/PycharmProjects$test.coverage" NAME="test Coverage Results" MODIFIED="1559036603996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/EasyWork/HoloParking" />
     <SUITE FILE_PATH="coverage/PycharmProjects$test_bags__1_.coverage" NAME="test_bags (1) Coverage Results" MODIFIED="1566444458609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_study" />
     <SUITE FILE_PATH="coverage/PycharmProjects$test_matplotlib.coverage" NAME="test_matplotlib Coverage Results" MODIFIED="1566445469082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_study" />
-    <SUITE FILE_PATH="coverage/PycharmProjects$test_bags.coverage" NAME="test_bags Coverage Results" MODIFIED="1556008060530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PycharmProjects$timer_easy.coverage" NAME="timer_easy Coverage Results" MODIFIED="1559185805671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/EasyWork/HoloParking" />
     <SUITE FILE_PATH="coverage/PycharmProjects$test_ssh.coverage" NAME="test_ssh Coverage Results" MODIFIED="1562129831133" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_study" />
+    <SUITE FILE_PATH="coverage/PycharmProjects$rosbag.coverage" NAME="rosbag_test Coverage Results" MODIFIED="1599051590636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/EasyWork/tools" />
+    <SUITE FILE_PATH="coverage/PycharmProjects$test_bag_image.coverage" NAME="test_bag_image Coverage Results" MODIFIED="1566446144409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_study" />
+    <SUITE FILE_PATH="coverage/PycharmProjects$timer_easy.coverage" NAME="timer_easy Coverage Results" MODIFIED="1559185805671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/EasyWork/HoloParking" />
+    <SUITE FILE_PATH="coverage/PycharmProjects$rosbag_test__1_.coverage" NAME="rosbag_test (1) Coverage Results" MODIFIED="1599051486874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_study" />
   </component>
 </project>
