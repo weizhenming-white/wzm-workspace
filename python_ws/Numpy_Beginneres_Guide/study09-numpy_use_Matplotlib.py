@@ -36,6 +36,9 @@ from datetime import date, datetime
 from matplotlib.pylab import date2num
 import matplotlib.pyplot as plt
 import pandas as pd
+from mpl_toolkits.mplot3d import Axes3D
+from matplotlib import cm
+import matplotlib.animation as animation
 
 
 def eg9_1():
@@ -443,8 +446,254 @@ def eg9_15():
         fill_between函数使用指定的颜色填充图像中的区域。我们也可以选择alpha通道的取值。
     该函数的where参数可以指定着色的条件。
     """
+    pass
+
+
+def eg9_16():
+    """
+    9.16 动手实践：根据条件进行着色
+        假设你想对股票曲线图进行着色，并将低于均值和高于均值的收盘价填充为不同颜色。
+    fill_between函数是完成这项工作的最佳选择。我们仍将省略下载一年以来历史数据、提取日
+    期和收盘价数据以及创建定位器和日期格式化器的步骤。
+    """
+    # (1) 加载苹果的股票信息，并转化成numpy
+    df_stock = pd.read_csv('output/AAPL.csv', header=0, index_col=None)
+    quotes = []
+    for i in range(df_stock.shape[0]):  # 遍历每行，shape为dataframe大小(x,y)，表示x行y列
+        if i == 0:
+            # 将交易日期日期转为数字
+            date_num = date2num(datetime.strptime(df_stock.ix[[i]].values[0][0], '%Y-%m-%d'))  # 1表示第一列，为交易日
+            date_plt = date_num
+        else:
+            date_plt = date_num + i  # 由于csv文件中日期为升序排序，这里为加号
+        open = df_stock.ix[[i]].values[0][1]  # 开盘价： i行第2列
+        close = df_stock.ix[[i]].values[0][2]  # 收盘价：i行第3列
+        high = df_stock.ix[[i]].values[0][3]  # 最高价：i行第4列
+        low = df_stock.ix[[i]].values[0][4]  # 最低价：i行第5列
+        datas = (date_plt, open, close, high, low)
+        quotes.append(datas)
+    quotes = np.array(quotes)
+    dates = quotes.T[0]
+    close = quotes.T[2]
+    alldays = DayLocator()
+    months = MonthLocator()
+    month_formatter = DateFormatter("%b %Y")
+
+    # (2) 创建一个Matplotlib的figure对象。
+    fig = plt.figure()
+
+    # (3) 在图像中添加一个子图。
+    ax = fig.add_subplot(111)
+
+    # (4) 绘制收盘价数据。
+    ax.plot(dates, close)
+
+    # (5) 对收盘价下方的区域进行着色，依据低于或高于平均收盘价使用不同的颜色填充。
+    plt.fill_between(dates, close.min(), close, where=close > close.mean(), facecolor="green", alpha=0.4)
+    plt.fill_between(dates, close.min(), close, where=close < close.mean(), facecolor="red", alpha=0.4)
+
+    #  (6) 现在，我们将设置定位器并将x轴格式化为日期，从而完成绘制。
+    ax.xaxis.set_major_locator(months)
+    ax.xaxis.set_minor_locator(alldays)
+    ax.xaxis.set_major_formatter(month_formatter)
+    ax.grid(True)
+    fig.autofmt_xdate()
+    plt.show()
+
+
+def eg9_17():
+    """
+    9.17 图例和注释
+        对于高质量的绘图，图例和注释是至关重要的。我们可以用legend函数创建透明的图例，
+    并由Matplotlib自动确定其摆放位置。同时，我们可以用annotate函数在图像上精确地添加注释，
+    并有很多可选的注释和箭头风格
+    """
+    pass
+
+
+def eg9_18():
+    """
+    9.18 动手实践：使用图例和注释
+        在第3章中我们学习了如何计算股价的指数移动平均线。我们将绘制一只股票的收盘价和对
+    应的三条指数移动平均线。为了清楚地描述图像的含义，我们将添加一个图例，并用注释标明两
+    条平均曲线的交点。部分重复的步骤将被略去。
+    """
+    # 加载苹果的股票信息，并转化成numpy
+    df_stock = pd.read_csv('output/AAPL.csv', header=0, index_col=None)
+    quotes = []
+    for i in range(df_stock.shape[0]):  # 遍历每行，shape为dataframe大小(x,y)，表示x行y列
+        if i == 0:
+            # 将交易日期日期转为数字
+            date_num = date2num(datetime.strptime(df_stock.ix[[i]].values[0][0], '%Y-%m-%d'))  # 1表示第一列，为交易日
+            date_plt = date_num
+        else:
+            date_plt = date_num + i  # 由于csv文件中日期为升序排序，这里为加号
+        open = df_stock.ix[[i]].values[0][1]  # 开盘价： i行第2列
+        close = df_stock.ix[[i]].values[0][2]  # 收盘价：i行第3列
+        high = df_stock.ix[[i]].values[0][3]  # 最高价：i行第4列
+        low = df_stock.ix[[i]].values[0][4]  # 最低价：i行第5列
+        datas = (date_plt, open, close, high, low)
+        quotes.append(datas)
+    quotes = np.array(quotes)
+    dates = quotes.T[0]
+    close = quotes.T[2]
+
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+
+    # (1) 计算并绘制指数移动平均线：如果需要，请回到第3章中复习一下指数移动平均线的计算
+    # 方法。分别使用9、12和15作为周期数计算和绘制指数移动平均线。
+    emas = []
+    for i in range(9, 18, 3):
+        weights = np.exp(np.linspace(-1., 0., i))
+        weights /= weights.sum()
+        ema = np.convolve(weights, close)[i - 1:-i + 1]
+        idx = (i - 6) / 3
+        ax.plot(dates[i - 1:], ema, lw=idx, label="EMA(%s)" % (i))
+        data = np.column_stack((dates[i - 1:], ema))
+        emas.append(np.rec.fromrecords(data, names=["dates", "ema"]))
+
+    # (2) 我们来找到两条指数移动平均曲线的交点。
+    first = emas[0]["ema"].flatten()
+    second = emas[1]["ema"].flatten()
+    bools = np.abs(first[-len(second):] - second) / second < 0.0001
+    xpoints = np.compress(bools, emas[1])
+
+    # (3) 我们将找到的交点用注释和箭头标注出来，并确保注释文本在交点的不远处。
+    for xpoint in xpoints:
+        ax.annotate('x', xy=xpoint, textcoords='offset points',
+                    xytext=(-50, 30),
+                    arrowprops=dict(arrowstyle="->"))
+
+    # (4) 添加一个图例并由Matplotlib自动确定其摆放位置。
+    leg = ax.legend(loc='best', fancybox=True)
+
+    # (5) 设置alpha通道值，将图例透明化。
+    leg.get_frame().set_alpha(0.5)
+
+    # (6) 显示图像
+    alldays = DayLocator()
+    months = MonthLocator()
+    month_formatter = DateFormatter("%b %Y")
+    ax.plot(dates, close, lw=1.0, label="Close")
+    ax.xaxis.set_major_locator(months)
+    ax.xaxis.set_minor_locator(alldays)
+    ax.xaxis.set_major_formatter(month_formatter)
+    ax.grid(True)
+    fig.autofmt_xdate()
+    plt.show()
+
+
+def eg9_19():
+    """
+    9.19 三维绘图
+        三维绘图非常壮观华丽，因此我们必须涵盖这部分内容。对于3D作图，我们需要一个和三
+    维投影相关的Axes3D对象。
+    """
+    pass
+
+
+def eg9_20():
+    """
+    9.20 动手实践：在三维空间中绘图
+        我们将在三维空间中绘制一个简单的三维函数。
+            z = x² + y²
+    """
+    # (1) 我们需要使用3d关键字来指定图像的三维投影。
+    fig = plt.figure()
+    ax = fig.add_subplot(111, projection='3d')
+
+    # (2) 我们将使用meshgrid函数创建一个二维的坐标网格。这将用于变量x和y的赋值。
+    u = np.linspace(-1, 1, 100)
+    x, y = np.meshgrid(u, u)
+    z = x ** 2 + y ** 2
+
+    # (3) 我们将指定行和列的步幅，以及绘制曲面所用的色彩表（color map）。步幅决定曲面上“瓦
+    # 片”的大小，而色彩表的选择取决于个人喜好。
+    ax.plot_surface(x, y, z, rstride=4, cstride=4, cmap=cm.YlGnBu_r)
+    plt.show()
+
+
+def eg9_21():
+    """
+    9.21 等高线图
+        Matplotlib中的等高线3D绘图有两种风格——填充的和非填充的。我们可以使用contour函
+    数创建一般的等高线图。对于色彩填充的等高线图，可以使用contourf绘制。
+    """
+    pass
+
+
+def eg9_22():
+    """
+    9.22 动手实践：绘制色彩填充的等高线图
+        我们将对前面“动手实践”中的三维数学函数绘制色彩填充的等高线图。代码也非常简单，
+    一个重要的区别是我们不再需要指定三维投影的参数。使用下面这行代码绘制等高线图：
+                ax.contourf(x, y, z)
+    """
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+    u = np.linspace(-1, 1, 100)
+    x, y = np.meshgrid(u, u)
+    z = x ** 2 + y ** 2
+    ax.contourf(x, y, z)
+    plt.show()
+
+
+def eg9_23():
+    """
+    9.23 动画
+        Matplotlib提供酷炫的动画功能。Matplotlib中有专门的动画模块。我们需要定义一个回调函
+    数，用于定期更新屏幕上的内容。我们还需要一个函数来生成图中的数据点。
+    """
+    pass
+
+
+def eg9_24():
+    """
+    9.24 动手实践：制作动画
+        我们将绘制三个随机生成的数据集，分别用圆形、小圆点和三角形来显示。不过，我们将只
+    用随机值更新其中的两个数据集。
+    """
+    # (1) 我们将用不同颜色的圆形、小圆点和三角形来绘制三个数据集中的数据点。
+    N = 10
+    x = np.random.rand(N)
+    y = np.random.rand(N)
+    z = np.random.rand(N)
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+    circles, triangles, dots = ax.plot(x, 'ro', y, 'g^', z, 'b.')
+
+    # (2) 下面的函数将被定期调用以更新屏幕上的内容。我们将随机更新两个数据集中的y坐
+    # 标值。
+    def update(data):
+        circles.set_ydata(data[0])
+        triangles.set_ydata(data[1])
+        return circles, triangles
+
+    # (3) 使用NumPy生成随机数。
+    def generate():
+        while True:
+            yield np.random.rand(2, N)
+
+    # 生成动画
+    anim = animation.FuncAnimation(fig, update, generate, interval=150)
+    plt.show()
+
+
+def eg9_25():
+    """
+    9.25 本章小结
+        本章围绕Matplotlib——一个Python绘图库展开，涵盖简单绘图、直方图、定制绘图、子图、
+    3D绘图、等高线图和对数坐标图等内容。我们还学习了几个绘制股票数据的例子。显然，我们
+    还只是领略了冰山一角。Matplotlib的功能非常丰富，因此我们没有足够的篇幅来讲述LaTex支持、
+    极坐标支持以及其他功能。
+        Matplotlib的作者John Hunter于2012年8月离开了我们。本书的审稿人之一建议在此提及John
+    Hunter纪念基金（John Hunter Memorial Fund，请访问http://numfocus.org/johnhunter/）。该基金由
+    NumFocus Foundation发起，可以这么说，它给了我们这些John Hunter作品的粉丝们一个回报的机
+    会。更多详情，请访问前面的NumFocus网站链接
+    """
+    pass
+
 
 if __name__ == '__main__':
-    eg9_14()
-    # m = [1, 3, 8, 5]
-    # print m[: -1]
+    eg9_24()
