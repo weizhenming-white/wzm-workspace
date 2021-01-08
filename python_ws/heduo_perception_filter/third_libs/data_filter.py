@@ -44,6 +44,35 @@ def bianli(path, params):
     return data
 
 
+def bianli_folder(path, params):
+    """
+    遍历指定目录，得到该目录下所有包含params后缀的子目录
+    :param path: 目标路径
+    :param params: 需要过滤的文件类型。如'.jpg','.bag'
+    :return: 返回带有这个文件的子目录的绝对路径，以及数量
+    """
+
+    # 设置初始变量
+    count = 0
+    data = []
+
+    for root, dirs, files in os.walk(path):
+        for file in files:
+            if os.path.splitext(file)[1] == params:
+                if root not in data:
+                    data.append(root)
+                    count += 1
+        for dir in dirs:
+            bianli_folder(dir, params)
+
+    # 打印所需要数据的数量信息
+    print("\n\n=============================================================================================")
+    print('The total is %d' % count)
+    print("=============================================================================================")
+
+    return data
+
+
 def sampling(path, step):
     """
     对数据进行采样，间隔step张图片抽一张

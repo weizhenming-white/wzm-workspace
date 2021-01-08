@@ -265,6 +265,8 @@ def filter_6(raw_data):
     print(output_data)
 
 
+
+
 def rename_file(path, output_path):
     """
     批量修改文件名，按照指定序号
@@ -285,6 +287,7 @@ def rename_file(path, output_path):
                     os.makedirs(export_front_wide)
                 os.system('cp %s %s' % (file_path, os.path.join(export_front_wide, str(front_wide).zfill(8) + '.jpeg')))
                 front_wide += 1
+                print('rename front wide')
             if str(file_path.split('/')[-2]) == 'CAMERA_FRONT_CENTER_GS':
                 export_front_sv = os.path.join(output_path, 'CAMERA_FRONT_CENTER_GS/')
                 if not os.path.exists(export_front_sv):
@@ -311,15 +314,42 @@ def rename_file(path, output_path):
                 rear_sv += 1
 
 
+
 if __name__ == '__main__':
+    # bianli('/home/holo/perception_data_filter/output_data/picture')
+    # rename_file('/home/holo/perception_data_filter/tmp')
 
     # filter_1('/home/holo/perception_data_filter/output_data/picture')
+    # filter_1('/home/holo/perception_data_filter/output_data/picture')
 
-    # filter_2('/media/holo/data1/workspace_test/perception_data/init_screen_data/20201223_oulu', 25)
+    # filter_2('/media/holo/data1/workspace_test/perception_data/init_screen_data/20201219_aolai', 10)
+    # filter_2('/media/holo/data1/workspace_test/perception_data/init_screen_data/20201210_aolai', 10)
+    # filter_2('/media/holo/data1/workspace_test/perception_data/init_screen_data/20201215_aolai', 10)
+    # filter_2('/media/holo/data1/workspace_test/perception_data/init_screen_data/20201221_aolai', 10)
+    # filter_2('/media/holo/data1/workspace_test/perception_data/init_screen_data/20201030_oulu', 10)
+    # filter_2('/media/holo/data/workspace_test/perception_data/init_screen_data/jizhi', 10)
 
-    filter_3('/media/holo/data1/wzm/test_data/finally_image/oulu/20210105')
+    # filter_3('/media/holo/data1/workspace_test/perception_data/raw_data/20201219_aolai')    # 158106
+    # filter_3('/media/holo/data1/workspace_test/perception_data/init_screen_data/20201219_aolai')  # 129974
+    # filter_3('/media/holo/data1/workspace_test/perception_data/detection/20201219_aolai')    # 13018
+    # filter_3('/media/holo/data1/workspace_test/perception_data/raw_data/20201210_aolai')    # 37227
+    # filter_3('/media/holo/data1/workspace_test/perception_data/init_screen_data/20201210_aolai')    # 25900
+    # filter_3('/media/holo/data1/workspace_test/perception_data/detection/20201210_aolai')   # 2623
+    # filter_3('/media/holo/data1/workspace_test/perception_data/raw_data/20201215_aolai')    # 46589
+    # filter_3('/media/holo/data1/workspace_test/perception_data/init_screen_data/20201215_aolai')    # 37861
+    # filter_3('/media/holo/data1/workspace_test/perception_data/detection/20201215_aolai')   # 3812
+    # filter_3('/media/holo/data1/workspace_test/perception_data/raw_data/20201221_aolai')    # 180693
+    # filter_3('/media/holo/data1/workspace_test/perception_data/init_screen_data/20201221_aolai')  # 172919
+    # filter_3('/media/holo/data1/workspace_test/perception_data/detection/20201221_aolai')   # 17296
+    # filter_3('/media/holo/data1/workspace_test/perception_data/raw_data/20201222_aolai')    # 97129
+    # filter_3('/media/holo/data1/workspace_test/perception_data/init_screen_data/20201222_aolai')  # 95653
+    # filter_3('/media/holo/data1/workspace_test/perception_data/detection/20201222_aolai')   # 9567
+    filter_3('/media/holo/data/workspace_test/perception_data/finally_data/Output_jizhi')
 
+    # filter_4('/media/holo/data1/workspace_test/perception_data/filter_data/maquanyingaolai_20201215',
+    #          '/media/holo/data1/workspace_test/perception_data/filter_data/maquanyingaolai_20201215/image_data')
     # filter_4('/home/holo/perception_data_filter/output_data/20201030_oulu',
     #          '/media/holo/data1/workspace_test/perception_data/filter_data/20201030_oulu/image_data')
     # filter_5('/media/holo/data1/workspace_test/bags/20201219_aolai/2020-12-19-13-55-04_aolai.bag', '/holo/gateway/vehicle_info_weltmeister')
     # filter_6('/media/holo/data1/workspace_test/perception_data/raw_data/20201219_aolai/2020-12-19-13-55-04_aolai/camera/front_center_gs_h264/CAMERA_FRONT_CENTER_GS')
+    # rename_file('/media/holo/data/workspace_test/perception_data/sampling_data/jizhi', '/media/holo/data/workspace_test/perception_data/finally_data/jizhi')

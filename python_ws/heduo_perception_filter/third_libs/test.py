@@ -103,5 +103,10 @@ def test_rosbag():
     os.system('rosbag play /home/holo/bags/test/2020-10-30-17-56-09.bag')
 
 
+def test_os():
+    path = '/home/holo/bags/raw_image/20201230/2020-12-30-14-20-48/camera/rear_center_h264/CAMERA_REAR_CENTER'
+    print os.path.split(path)
+
+
 if __name__ == '__main__':
-    test_bag()
+    test_os()

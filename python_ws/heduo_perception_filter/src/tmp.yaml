@@ -1,0 +1,2 @@
+topic: ['/holo/sensors/camera/front_center_gs_h264', '/holo/sensors/camera/front_right_h264', '/holo/sensors/camera/front_center_h264']
+yaml_file: ['front_center_camera_ov490.yaml', 'right_center_camera_ov490.yaml', 'front_center_camera_ar.yaml']
